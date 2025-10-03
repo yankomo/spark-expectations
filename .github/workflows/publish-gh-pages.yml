@@ -30,7 +30,7 @@ jobs:
           check-latest: true
       - name: Install Hatch
         uses: pypa/hatch@install
-            - name: Install dependencies
+      - name: Install dependencies
         run: |
           export PATH=$PATH:$HOME/.local/bin
           make deploy_env_setup
