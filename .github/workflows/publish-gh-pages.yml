@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version number to pass to docs command (numerals and .s only, no letters!)'
+        description: "Version number to pass to docs command. Format: 'v1.23'"
         required: false
 jobs:
   publish-gh-pages:
@@ -31,4 +31,4 @@ jobs:
           export PATH=$PATH:$HOME/.local/bin
           make deploy_env_setup
       - name: Publish Docs
-        run: make deploy-docs version=v${{ github.event.inputs.version }}
+        run: make deploy-docs version=${{ github.event.inputs.version }}
