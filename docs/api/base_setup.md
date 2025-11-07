@@ -3,7 +3,7 @@ search:
   exclude: true
 ---
 
-::: examples.scripts.base_setup
+::: spark_expectations.examples.scripts.base_setup
     handler: python
     options:
         filters:
